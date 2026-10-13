@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ejemplo() {
+            let listanumeros = document.getElementById("listanumeros");
+            //creamos un contenido para dibujar abajo en la lista
+            let contenido = "<li>2</li>";
+            contenido += "<li>4</li>";
+            contenido += "<li>6</li>";
+            listanumeros.innerHTML = contenido;
+        }
+    </script>
+</head>
+<body>
+    <h1>Números pares</h1>
+    <button onclick="ejemplo()">
+        Mostrar pares
+    </button>
+    <ul id="listanumeros">
+
+    </ul>
+</body>
+</html>
