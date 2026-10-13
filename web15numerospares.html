@@ -6,6 +6,7 @@
     <title>Document</title>
     <script>
         function ejemplo() {
+<<<<<<< HEAD
             let lista = document.getElementById("listanumeros");
            let contenido= "<li>2</li>"
            contenido+= "<li>4</li>";
@@ -25,16 +26,47 @@
             }      
              //dibujamos en la lista el contenido html
              listanumeros.innerHTML  = contenido;
+=======
+            let listanumeros = document.getElementById("listanumeros");
+            //creamos un contenido para dibujar abajo en la lista
+            let contenido = "<li>2</li>";
+            contenido += "<li>4</li>";
+            contenido += "<li>6</li>";
+            listanumeros.innerHTML = contenido;
+        }
+
+        function generarPares() {
+            //recuperamos la lista de numeros para el dibujo
+            let listanumeros = document.getElementById("listanumeros");
+            let contenido = "";
+            for (let i = 1; i <= 20; i++){
+                //debemos preguntar qué números son pares
+                if (i % 2 == 0){
+                    //par
+                    contenido += "<li>" + i + "</li>";
+                }
+            }
+            //dibujamos en la lista el contenido html
+            listanumeros.innerHTML = contenido;
+>>>>>>> 5f9bb6bd347ed7b8a1a53dbe36b60297c9d4017b
         }
     </script>
 </head>
 <body>
+<<<<<<< HEAD
     <h1>Numero Pares</h1>
     <button onclick="generarPares()">
         mostrar pares
     </button>
     <ul id="listanumeros">
        
+=======
+    <h1>Números pares</h1>
+    <button onclick="generarPares()">
+        Mostrar pares
+    </button>
+    <ul id="listanumeros">
+>>>>>>> 5f9bb6bd347ed7b8a1a53dbe36b60297c9d4017b
     </ul>
 </body>
 </html>
