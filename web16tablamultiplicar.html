@@ -8,11 +8,15 @@
         function mostrarTabla() {
             //recuperamos la lista de numeros para el dibujo
             let listanumeros = document.getElementById("listanumeros");
+            //recuperamos la caja de texto cajanumero
+            let cajanumero = document.getElementById("cajanumero");
+            //recuperamos el valor del numero de la caja
+            let numero = parseInt(cajanumero.value);
             //creamos el contenido para el dibujo
             let contenido = "";
             //necesitamos la tabla de multiplicar del número 9 (1--10)
             for (let i = 1; i <= 10; i++){
-                let operacion = 9 * i;
+                let operacion = numero * i;
                 contenido += "<li>" + operacion + "</li>";
             }
             //dibujamos en la lista inferior
@@ -22,6 +26,7 @@
 </head>
 <body>
     <h1>Tabla multiplicar</h1>
+    Introduzca un número <input type="number" id="cajanumero"/>
     <button onclick="mostrarTabla()">Mostrar tabla</button>
     <ul id="listanumeros">
 
