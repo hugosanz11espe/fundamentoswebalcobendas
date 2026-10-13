@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ejecutarBucleFor(){
+            //inicio=4, hasta 8, de uno en uno;
+            let texto="";
+            for(let i=1; i<=8; i++){
+                texto += i + " ";
+                
+        }
+        //recuperamos resultado
+      let resultado = document.getElementById("resultado");
+        resultado.innerText= texto;
+    }
+
+    function ejecutarWhile() {
+        let contador=1;
+        //mientras que contador no llegue a 14, hacemos instrucciones
+        let texto="";
+        while (contador <= 14) {
+            texto += contador + " ";
+            contador+=1;
+        }
+       let resultado = document.getElementById("resultado");        
+       resultado.innerText= texto;
+    }
+    </script>
+</head>
+<body>
+    <h1>SIntaxis de bucles</h1>
+    <button onclick="ejecutarBucleFor()">ejecutar for</button>
+    <button onclick="ejecutarWhile()">ejecutar while</button>
+    <p id="resultado"></p>
+</body>
+</html>
